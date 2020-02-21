@@ -30,7 +30,7 @@ def scriptParser(filename):
     sceneText.append('')
     regstr = ''
     #Regex to Parse Movie Script 
-    pattern = re.compile(r'^\d.+\d\n?$|^\d..$')
+    pattern = re.compile(r'^\d.+\d\n?$|^\d+.$')
     patternB = re.compile(r'^EXT\..+$|^INT\..+$')
     patternC = re.compile(r'^I/E.+$')
     for i in range(len(preText)):
