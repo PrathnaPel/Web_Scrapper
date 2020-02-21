@@ -30,7 +30,7 @@ def scriptParser(filename):
     sceneText.append('')
     regstr = ''
     #Regex to Parse Movie Script 
-    pattern = re.compile(r'^\d.+\n?$')
+    pattern = re.compile(r'^\d.+\d\n?$|^\d..$')
     patternB = re.compile(r'^EXT\..+$|^INT\..+$')
     patternC = re.compile(r'^I/E.+$')
     for i in range(len(preText)):
@@ -54,4 +54,4 @@ def scriptParser(filename):
 url = 'https://www.imsdb.com/scripts/A-Quiet-Place.html'
 allMoviesUrl = "https://www.imsdb.com/all%20scripts/"
 #getMovieScript('A-Quiet-Place',loadUrl(url))
-#scriptParser('A-Quiet-Place')
+scriptParser('A-Quiet-Place')
