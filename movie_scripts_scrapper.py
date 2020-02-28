@@ -7,7 +7,7 @@ import time
 #Return HTML Source Page of Url
 def loadUrl(url,driver):
     driver.get(url)
-    time.sleep(5)
+    time.sleep(10)
     return driver.page_source
 
 #Get Movie Script Text
