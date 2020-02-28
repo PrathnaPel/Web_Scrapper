@@ -29,9 +29,9 @@ def scriptParser(name):
     sceneText.append('')
     regstr = ''
     #Regex to Parse Movie Script 
-    pattern = re.compile(r'^\d.+\d\n?$|^\d+\s?.$',flags=re.MULTILINE)
-    patternB = re.compile(r'^EXT.+$|^INT.+$',flags=re.MULTILINE)
-    patternC = re.compile(r'^I/E.+$',flags=re.MULTILINE)
+    pattern = re.compile(r'^\d.*\d.*\n?$|^\d+\s?.$',flags=re.MULTILINE)
+    patternB = re.compile(r'^\bEXT\b.+$|^\bINT\b.+$',flags=re.MULTILINE)
+    patternC = re.compile(r'^\bI/E\b.+$',flags=re.MULTILINE)
     for i in range(len(preText)):
         text = preText[i]
         if pattern.match(text.strip()) != None or patternB.match(text.strip()) != None or patternC.match(text.strip()) != None:
