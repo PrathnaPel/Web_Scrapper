@@ -29,7 +29,7 @@ def scriptParser(name):
     sceneText.append('')
     regstr = ''
     #Regex to Parse Movie Script 
-    pattern = re.compile(r'^\d.*\d.*\n?$|^\d+\s?.$',flags=re.MULTILINE)
+    pattern = re.compile(r'^\d.*\d[a-zA-Z0-9]*\n?$|^\d+\s?.$',flags=re.MULTILINE)
     patternB = re.compile(r'^\bEXT\b.+$|^\bINT\b.+$',flags=re.MULTILINE)
     patternC = re.compile(r'^\bI/E\b.+$',flags=re.MULTILINE)
     for i in range(len(preText)):
@@ -87,8 +87,8 @@ if __name__ == "__main__":
         ex2_url = 'https://www.imsdb.com/scripts/Black-Panther.html'
         ex1_tl = 'A-Quiet-Place'
         ex2_tl = 'Black-Panther'
-        getMovieScript(ex1_tl,loadUrl(ex1_url,driver))
-        getMovieScript(ex2_tl,loadUrl(ex2_url,driver))
+        #getMovieScript(ex1_tl,loadUrl(ex1_url,driver))
+        #getMovieScript(ex2_tl,loadUrl(ex2_url,driver))
         scriptParser(ex1_tl)
         scriptParser(ex2_tl)
 
@@ -96,8 +96,8 @@ if __name__ == "__main__":
         allMoviesUrl = "https://www.imsdb.com/all%20scripts/"
 
         # Load all movie names
-        tl = getMovieTitles(loadUrl(allMoviesUrl,driver))
-        movieTitlesToCsv(tl)
+        #tl = getMovieTitles(loadUrl(allMoviesUrl,driver))
+        #movieTitlesToCsv(tl)
 
         # Get all movies scripts
 
