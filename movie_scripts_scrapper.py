@@ -48,7 +48,7 @@ def scriptParser(name):
     
     #DataFrame
     df_movie = pd.DataFrame({'Scenes':sceneText,'Scripts':scriptText})
-    df_movie.to_csv('./data/movies/'+name + '.csv',index=True)
+    df_movie.to_csv('./data/movies/'+name + '.csv',index=False)
 
 # Get Array of movie names from https://www.imsdb.com
 def getMovieTitles(source):
@@ -69,7 +69,7 @@ def movieTitlesToCsv(arr):
     df = pd.DataFrame(title_url)
     #Trim unecessary
     df = df.iloc[67:df.shape[0]-7]
-    df.to_csv('./url/movies_url.csv',index=True)
+    df.to_csv('./url/movies_url.csv',index=False)
 
 #Return movie url from title
 def generateMovieUrl(title):
